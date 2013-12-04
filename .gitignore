@@ -12,4 +12,9 @@ logs
 results
 
 npm-debug.log
+
+#node_modules folder
 node_modules
+
+#data folder
+data
