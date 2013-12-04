@@ -1,0 +1,18 @@
+extends layout
+
+block content
+	#header
+		h1= title
+	#bar
+	#container
+		h1 Samples
+		p These are all the art samples in the collection.
+		ol
+			each sample, i in samplegroup
+				li=sample.title + " in " + sample.medium + " by " + sample.artist 
+		p Enter the information below to add a new sample to the collection.
+		form#formAddSample(name="addsample",method="post",action="/addsample")
+			input#inputSampleTitle(type="text", placeholder="title", name="title")
+			input#inputSampleMedium(type="text", placeholder="medium", name="medium")
+			input#inputSampleArtist(type="text", placeholder="artist", name="artist")
+			button#btnSubmit(type="submit") submit
