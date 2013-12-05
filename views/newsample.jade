@@ -1,0 +1,14 @@
+extends layout
+
+block content
+	#header
+		h1= title
+	#bar
+	#container
+		h1 Create
+		p Enter the information below to add a new sample to the collection.
+		form#formAddSample(name="addsample",method="post",action="/addsample")
+			input#inputSampleTitle(type="text", placeholder="title", name="title")
+			input#inputSampleMedium(type="text", placeholder="medium", name="medium")
+			input#inputSampleArtist(type="text", placeholder="artist", name="artist")
+			button#btnSubmit(type="submit") submit

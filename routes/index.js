@@ -50,3 +50,7 @@ exports.addsample = function(db) {
 
     }
 }
+
+exports.newsample = function(req, res){
+  res.render('newsample', { title: 'CRUD Example - Create' });
+};

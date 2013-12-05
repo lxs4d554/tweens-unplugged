@@ -5,5 +5,7 @@ block content
 		h1= title
 	#bar
 	#container
-		p Go to /samplegroup to perform CRUD operations
+		h1 Manage Art Collection
+		form#formManageCollection(name="addsample",method="get",action="/samplegroup")
+			button#btnSubmit(type="submit") Manage
 		
