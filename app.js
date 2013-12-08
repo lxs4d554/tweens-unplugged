@@ -11,7 +11,8 @@ var path = require('path');
 
 var mongo = require('mongodb');
 var monk = require('monk');
-var db = monk('localhost:27017/crud_example');
+//var db = monk('localhost:27017/crud_example');
+var db = monk('mongodb://tweensunplugged:tweens@ds053808.mongolab.com:53808/tweens')
 var id;
 
 var app = express();
