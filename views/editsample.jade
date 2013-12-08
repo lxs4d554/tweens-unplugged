@@ -1,0 +1,25 @@
+extends layout
+
+block content
+	#header
+		#logo <img src="../images/logo.png" width="475" height="100" alt="logo"/>
+	#bar
+	#container
+		h1 Update or Delete a record
+		p Edit the fields below and click "Update This Record" to modify the sample.<br />To delete, make no changes and select "Delete This Record."
+		
+		form#formEditSample(name="update",method="post",action="/update")
+			p Title&nbsp;&nbsp;
+				input#inputSampleTitle(type="text", value="#{editsample[0].title}", name="title")
+			p Medium&nbsp;&nbsp;
+				input#inputSampleMedium(type="text", value="#{editsample[0].medium}", name="medium")
+			p Artist&nbsp;&nbsp;
+				input#inputSampleArtist(type="text", value="#{editsample[0].artist}", name="artist")
+			p Featured?&nbsp;&nbsp;
+				input#inputSampleDisplayed(type="text", value="#{editsample[0].displayed}", name="displayed")
+				span Enter "yes" or "no" only
+			input#inputSampleId(type="hidden", value="#{editsample[0]._id}", name="id")
+			button#btnSubmit(type="submit") Update This Record
+		form#formDeleteSample(name ="deletesample", method="post", action="/deletesample")
+			button#btnSubmit(type="submit") Delete This Record
+			input#inputSampleId2(type="hidden", value="#{editsample[0]._id}", name="id2")

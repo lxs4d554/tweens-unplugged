@@ -26,7 +26,12 @@ padding-top:2em;
 text-align:left;
 margin-left:25px;
 }
-
+#logo{
+width:30%;
+margin:auto;
+padding-top:20px;
+text-align:center;
+}
 #footer img{
 padding:.5em;
 border:none;
@@ -40,4 +45,24 @@ font-weight:bold;
 
 input{
 margin-right:5px;
+}
+button{
+margin-top:5px;
+background-color:#eb7d1c;
+color:white;
+border:1px solid #eb7d1c;
+}
+
+p{
+color:#68bfc7;
+}
+
+a:link, a:visited {
+ 
+ text-decoration:underline;
+ font-style:normal;
+ color:black;
+}
+ol{
+list-style-type:none;
 }

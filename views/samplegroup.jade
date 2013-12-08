@@ -2,13 +2,23 @@ extends layout
 
 block content
 	#header
-		h1= title
+		#logo <img src="images/logo.png" width="475" height="100" alt="logo"/>
 	#bar
 	#container
 		h1 Samples
-		p These are all the art samples in the collection.<br />They have been submitted by tweens and can be featured on the Tweens Unplugged website.
+		p These are all the art samples in the collection.<br>They have been submitted by tweens and can be featured on the Tweens Unplugged website.
+		p Click on an item to modify or delete the record.
 		ol
 			each sample, i in samplegroup
-				li=sample.title + " in " + sample.medium + " by " + sample.artist 
+				li
+					a(href="/editsample/#{sample._id}")=sample.title + " in " + sample.medium + " by " + sample.artist
+					ul
+						if sample.displayed=="yes"
+							li This item has been featured on the website
+						else
+							li This item has not been featured on the website
+						
 		form#formAddSample(name="addsample",method="get",action="/newsample")
-			button#btnSubmit(type="submit") Add Record
+			button#btnSubmit(type="submit") Add a new record
+			
+		
